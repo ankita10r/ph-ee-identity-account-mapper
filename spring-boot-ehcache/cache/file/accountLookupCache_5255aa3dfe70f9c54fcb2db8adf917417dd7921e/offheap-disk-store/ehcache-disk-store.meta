@@ -1,0 +1,4 @@
+#Key and value types
+#Thu May 25 21:16:43 IST 2023
+valueType=org.mifos.identityaccountmapper.data.AccountLookupResponseDTO
+keyType=java.lang.String

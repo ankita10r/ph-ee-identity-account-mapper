@@ -3,7 +3,7 @@ plugins {
 	id 'org.springframework.boot' version '2.5.5'
 	id 'io.spring.dependency-management' version '1.1.0'
 	id 'idea'
-
+	id "org.springdoc.openapi-gradle-plugin" version "1.6.0"
 	id 'eclipse'
 }
 
@@ -24,7 +24,11 @@ ext {
 	camelVersion = '3.18.1'
 	zeebClientVersion = '1.3.1'
 }
-
+//openApi {
+//	apiDocsUrl.set("http://localhost:5000/v3/api-docs")
+//	outputDir.set(file("$buildDir/docs"))
+//	outputFileName.set("swagger.yaml")
+//}
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -54,8 +58,14 @@ dependencies {
 	implementation "org.apache.camel:camel-jetty:$camelVersion"
 	implementation("io.camunda:zeebe-client-java:$zeebClientVersion")
 	implementation 'net.sf.ehcache:ehcache:2.10.6'
+
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+openApi {
+	apiDocsUrl.set("http://localhost:8081/v3/api-docs")
+	outputDir.set(file("$buildDir/docs"))
+	outputFileName.set("swagger.yaml")
 }
