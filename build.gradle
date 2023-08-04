@@ -65,7 +65,7 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 openApi {
-	apiDocsUrl.set("http://identity.sandbox.fynarfin.io:8080/v3/api-docs")
+	apiDocsUrl.set("http://identity.sandbox.fynarfin.io/v3/api-docs")
 	outputDir.set(file("$buildDir/docs"))
 	outputFileName.set("swagger.yaml")
 }
