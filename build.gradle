@@ -65,7 +65,7 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 openApi {
-    apiDocsUrl.set("https://identity-mapper.sandbox.fynarfin.io/v3/api-docs")
+    apiDocsUrl.set("https://9ebf-106-51-164-113.ngrok-free.app/v3/api-docs")
     outputDir.set(file("src/main/java/docs"))
     outputFileName.set("swagger.yaml")
 }
