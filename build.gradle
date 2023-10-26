@@ -65,7 +65,7 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 openApi {
-    apiDocsUrl.set("https://a237-2401-4900-3620-e46a-f195-7028-8bc9-4035.ngrok-free.appv3/api-docs")
+    apiDocsUrl.set("https://a237-2401-4900-3620-e46a-f195-7028-8bc9-4035.ngrok-free.app/v3/api-docs")
     outputDir.set(file("src/main/java/docs"))
     outputFileName.set("swagger.yaml")
 }
